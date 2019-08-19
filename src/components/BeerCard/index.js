@@ -25,21 +25,21 @@ const Image = styled("img")`
   margin-bottom: 2em;
 `;
 
-const beerLink = id => `/beer/${id}`;
+const getBeerLink = id => `/beer/${id}`;
 
 const BeerCard = ({ id, name, image, abv }) => (
   <BeerCardWrapper>
     <BeerCardHeading>
       <h2>
-        <Link to={beerLink(id)}>{name}</Link>
+        <Link to={getBeerLink(id)}>{name}</Link>
       </h2>
       <p>ABV: {abv}%</p>
     </BeerCardHeading>
-    <Link to={beerLink(id)}>
+    <Link to={getBeerLink(id)}>
       <Image src={image} alt={`Bottle of ${name}`} />
     </Link>
     <div>
-      <Link to={beerLink(id)}>More details</Link>
+      <Link to={getBeerLink(id)}>More details</Link>
     </div>
   </BeerCardWrapper>
 );
