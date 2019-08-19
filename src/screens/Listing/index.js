@@ -39,6 +39,10 @@ const SORT_OPTIONS = {
 const Listing = () => {
   const { state, dispatch } = useContext(CellarContext);
 
+  /**
+   * This effect _could_ be pulled out and shared between the two views,
+   * with a switch for the url based on presence of an id attr
+   */
   useEffect(() => {
     async function fetchBeerListing() {
       dispatch(getCellarStart());
