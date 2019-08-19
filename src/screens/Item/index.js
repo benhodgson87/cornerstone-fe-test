@@ -9,6 +9,11 @@ const Listing = ({ match }) => {
 
   const { contents, error, submitting } = state;
 
+  /**
+   * Given more time I'd refactor this to only make the call if the beer
+   * does not exist in the store state
+   */
+
   useEffect(() => {
     async function fetchBeer(id) {
       dispatch(getCellarStart());
