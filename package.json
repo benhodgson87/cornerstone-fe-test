@@ -5,7 +5,6 @@
   "dependencies": {
     "@emotion/core": "^10.0.16",
     "@emotion/styled": "^10.0.15",
-    "@rebass/grid": "^6.1.0",
     "deep-sort": "^1.0.4",
     "emotion-normalize": "^10.1.0",
     "ky": "^0.12.0",
