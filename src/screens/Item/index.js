@@ -26,7 +26,7 @@ const Listing = ({ match }) => {
     }
 
     fetchBeer(match.params.id);
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [match, dispatch]);
 
   const currentItem =
     contents.length > 0 &&
